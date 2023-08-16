@@ -53,17 +53,19 @@ WHERE Feb.Quantity>2
 AND length(orderid) = 6 
 AND orderid <> 'Order ID'
 
-##1. List the orders date and time between 02/13/19 AND 02/18/19?
+#8. List the orders date and time between 02/13/19 AND 02/18/19?
 SELECT orderdate
 FROM BIT_DB.FebSales
 WHERE orderdate between '02/13/19 00:00' AND '02/18/19 00:00'
 
-##2. From what location was the made that was recieved at 02/18/19 01:35?
+#9. From what location was the made that was recieved at 02/18/19 01:35?
 SELECT location
 FROM BIT_DB.FebSales 
 WHERE orderdate = '02/18/19 01:35'
 
-##3. How many items were sold on 02/18/19?
+#10. How many items were sold on 02/18/19?
 SELECT sum(quantity)
 FROM BIT_DB.FebSales 
 WHERE orderdate like '02/18/19%'
+
+
